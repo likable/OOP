@@ -1,19 +1,22 @@
 <?php
 
-require_once 'classes/FirstClass.php';
-require_once 'classes/SecondClass.php';
+require_once 'classes/Car.php';
 
-$o11 = new FirstClass();
-$o12 = new FirstClass();
+$car1 = new Car();
 
-$o21 = new SecondClass();
-$o22 = new SecondClass();
+$car1->color = 'чёрный';
+$car1->brand = 'BMW';
 
-var_dump($o11);
+var_dump($car1);
 echo "<br>";
-var_dump($o12);
+
+$car2 = new Car();
+
+$car2->color = 'белый';
+$car2->brand = 'mazda';
+$car2->speed = 220;
+
+var_dump($car2);
 echo "<br>";
-var_dump($o21);
-echo "<br>";
-var_dump($o22);
-echo "<br>";
+
+echo "Цвет моего автомобиля {$car1->brand} - {$car1->color}.";
