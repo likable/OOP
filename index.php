@@ -19,4 +19,5 @@ $car2->speed = 220;
 var_dump($car2);
 echo "<br>";
 
-echo "Цвет моего автомобиля {$car1->brand} - {$car1->color}.";
+echo $car1->getCarInfo();
+echo $car2->getCarInfo();
