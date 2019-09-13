@@ -2,22 +2,14 @@
 
 require_once 'classes/Car.php';
 
-$car1 = new Car();
+function debug($data)
+{
+    echo "<pre>" . print_r($data) . "</pre>";
+}
 
-$car1->color = 'чёрный';
-$car1->brand = 'BMW';
+$car1 = new Car('BMW', 'чёрный');
 
-var_dump($car1);
-echo "<br>";
-
-$car2 = new Car();
-
-$car2->color = 'белый';
-$car2->brand = 'mazda';
-$car2->speed = 220;
-
-var_dump($car2);
-echo "<br>";
+$car2 = new Car('Mazda', 'белый', 220);
 
 echo $car1->getCarInfo();
 echo $car2->getCarInfo();
