@@ -6,40 +6,27 @@ class Product
     public $name;
     public $price;
     
-    public $cpu;
-    public $numPages;
-    
-    public function __construct($name, $price, $cpu = null, $numPages = null)
+    public function __construct($name, $price)
     {
         $this->name = $name;
         $this->price = $price;
-        $this->cpu = $cpu;
-        $this->numPages = $numPages;
     }
     
-    public function getCpu()
+    public function getName()
     {
-        return $this->cpu;
+        return $this->name;
     }
     
-    public function getNumPages()
+    public function getPrice()
     {
-        return $this->numPages;
+        return $this->price;
     }
     
-    public function getProduct($type = "notebook")
+    public function getProduct()
     {
-        $out = "<hr><b>О товаре:</b><br>
+        return "<hr><b>О товаре:</b><br>
                 Наименование: {$this->name}<br>
                 Цена: {$this->price}<br>";
-                
-        if ($type == "notebook") {
-            $out .= "Процессор: {$this->cpu}<br>";
-        } elseif ($type == "book") {
-            $out .= "Кол-во страниц: {$this->numPages}<br>";
-        }
-        
-        return $out;
     }
     
 }
