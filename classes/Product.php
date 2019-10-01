@@ -1,6 +1,6 @@
 <?php
 
-class Product
+abstract class Product
 {
     
     private $name;
@@ -8,15 +8,12 @@ class Product
     
     private $discount = 0;
     
-//    public $public = "PUBLIC";
-//    protected $protected = "PROTECTED";
-//    private $private = "PRIVATE";
+    const TEST = 10;
     
     public function __construct($name, $price)
     {
         $this->name = $name;
         $this->price = $price;
-        $this->setDiscount(5);
     }
     
     public function getName()
@@ -45,5 +42,7 @@ class Product
     {
         $this->discount = $discount;
     }
+    
+    abstract protected function addProduct($name, $price);
     
 }
