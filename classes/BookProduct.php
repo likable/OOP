@@ -11,7 +11,6 @@ class BookProduct extends Product implements I3D
         parent::__construct($name, $price);
         $this->numPages = $numPages;
         $this->setDiscount(5);
-        var_dump(self::TEST);
     }
     
     public function getProduct() 
@@ -25,7 +24,7 @@ class BookProduct extends Product implements I3D
     
     public function test()
     {
-        var_dump(self::TEST2);
+        
     }
     
     public function getNumPages()

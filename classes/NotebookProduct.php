@@ -1,6 +1,6 @@
 <?php
 
-class NotebookProduct extends Product
+class NotebookProduct extends Product implements IGadget
 {
     
     public $cpu;
@@ -9,6 +9,11 @@ class NotebookProduct extends Product
     {
         parent::__construct($name, $price);
         $this->cpu = $cpu;
+    }
+    
+    public function getCase()
+    {
+        
     }
     
     public function getProduct() {
@@ -20,6 +25,13 @@ class NotebookProduct extends Product
     public function getCpu() 
     {
         return $this->cpu;
+    }
+    
+    public function addProduct($name, $price, $numPages = 0)
+    {
+        var_dump($name);
+        var_dump($price);
+        var_dump($numPages);
     }
     
 }
