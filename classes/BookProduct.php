@@ -1,5 +1,9 @@
 <?php
 
+namespace classes;
+
+use classes\interfaces\I3D;
+
 class BookProduct extends Product implements I3D
 {
     public $numPages;
@@ -11,6 +15,7 @@ class BookProduct extends Product implements I3D
         parent::__construct($name, $price);
         $this->numPages = $numPages;
         $this->setDiscount(5);
+        var_dump(self::class);
     }
     
     public function getProduct() 
