@@ -35,3 +35,6 @@ offerCase($notebook);
 debug($book);
 
 echo $book->getProduct();
+
+$mail = new \PHPMailer\PHPMailer\PHPMailer();
+debug($mail);

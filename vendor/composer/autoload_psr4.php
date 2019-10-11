@@ -8,4 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'core\\' => array($vendorDir . '/core'),
     'app\\' => array($baseDir . '/app'),
+    'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
 );
