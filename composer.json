@@ -2,7 +2,8 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "classes\\": "classes"
+            "core\\": "vendor/core",
+            "app\\": "app"
         }
     }
 }

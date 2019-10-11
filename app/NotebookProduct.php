@@ -1,8 +1,9 @@
 <?php
 
-namespace classes;
+namespace app;
 
-use classes\interfaces\IGadget;
+use core\interfaces\IGadget;
+use core\Product;
 
 class NotebookProduct extends Product implements IGadget
 {

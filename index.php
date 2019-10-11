@@ -1,7 +1,7 @@
 <?php
 
-use classes\interfaces\IGadget;
-use classes\{BookProduct, NotebookProduct};
+use core\interfaces\IGadget;
+use app\{BookProduct, NotebookProduct};
 
 error_reporting(-1);
 
