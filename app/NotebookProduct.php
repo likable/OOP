@@ -4,9 +4,12 @@ namespace app;
 
 use core\interfaces\IGadget;
 use core\Product;
+use app\traits\TColor;
 
 class NotebookProduct extends Product implements IGadget
 {
+    
+    use TColor;
     
     public $cpu;
     
