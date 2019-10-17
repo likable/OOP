@@ -33,8 +33,6 @@ $notebook = new NotebookProduct("Dell", 1000, "Intel");
 offerCase($notebook);
 
 debug($book);
+debug($notebook);
 
 echo $book->getProduct();
-
-$mail = new \PHPMailer\PHPMailer\PHPMailer();
-debug($mail);
