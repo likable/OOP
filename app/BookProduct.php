@@ -9,14 +9,16 @@ class BookProduct extends Product implements I3D
 {
     public $numPages;
     
-    const TEST = 20;
+    public $action1;
+    public $action2;
+    
+    //const TEST = 20;
     
     public function __construct($name, $price, $numPages) 
     {
         parent::__construct($name, $price);
         $this->numPages = $numPages;
         $this->setDiscount(5);
-        var_dump(self::class);
     }
     
     public function getProduct() 
@@ -43,6 +45,18 @@ class BookProduct extends Product implements I3D
         var_dump($name);
         var_dump($price);
         var_dump($numPages);
+    }
+    
+    public function doAction1()
+    {
+        echo $this->action1 = "<p>Выполнили действие 1</p>";
+        return $this;
+    }
+    
+    public function doAction2()
+    {
+        echo $this->action2 = "<p>Выполнили действие 2</p>";
+        return $this;
     }
     
 }
