@@ -30,27 +30,16 @@ function offerCase(IGadget $product){
 $book = new BookProduct("Три мушкетёра", 20, 1000);
 $notebook = new NotebookProduct("Dell", 1000, "Intel");
 
-/*
-offerCase($notebook);
+$book->test = "Hello";
+
+echo $book->name;
+
+//offerCase($notebook);
 
 debug($book);
-debug($notebook);
+//debug($notebook);
 
-echo $book->getProduct();
-*/
+//echo $book->getProduct();
 
-//проверка позднего статического связывания
-$a = new \app\A();
-$b = new \app\B();
 
-$a->getTest();
-echo "<br>";
-
-$b->getTest();
-echo "<br>";
-
-$b->getTest2();
-echo "<br>";
-
-//реализация цепочки методов
-$book->doAction1()->doAction2();
+//echo $book;

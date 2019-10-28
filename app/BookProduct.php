@@ -21,6 +21,26 @@ class BookProduct extends Product implements I3D
         $this->setDiscount(5);
     }
     
+    public function __toString() 
+    {
+        return $this->getProduct();
+    }
+    
+    public function __get($name)
+    {
+        //var_dump($name);
+        $name = ucfirst($name);
+        $method = "get{$name}";
+        if (method_exists($this, $method)) {
+            return $this->$method();
+        }
+    }
+    
+    public function __set($name, $value) 
+    {
+        var_dump($name, $value);
+    }
+    
     public function getProduct() 
     {
         $out = parent::getProduct();
